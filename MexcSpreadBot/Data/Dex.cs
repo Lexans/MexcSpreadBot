@@ -21,6 +21,7 @@ namespace MexcSpreadBot.Data
         public double? VolumeH1 { get; set; }
         public double? VolumeH24 { get; set; }
         public double? LiquidityUsd { get; set; }
+        public double? PriceChangeM5 { get; set; }
 
 
         public Pair Pair { get; set; }

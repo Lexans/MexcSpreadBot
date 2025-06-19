@@ -12,6 +12,7 @@
         public double VolumeH1Dex { get; set; }
         public double VolumeH24Dex { get; set; }
         public double VolumeH24Mexc { get; set; }
+        public double PriceChangeM5 { get; set; }
         public string ChainId { get; set; }
         public string PairAddress { get; set; }
     }

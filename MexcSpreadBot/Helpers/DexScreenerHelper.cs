@@ -127,6 +127,17 @@ public class DexScreenerHelper
                 }
             }
 
+            // priceChange
+            if (pair.TryGetProperty("priceChange", out var priceChangeObj))
+            {
+                if (priceChangeObj.TryGetProperty("m5", out var pcM5))
+                {
+                    dex.PriceChangeM5 = pcM5.GetDouble();
+                }
+            }
+
+
+
             // Liquidity
             if (pair.TryGetProperty("liquidity", out var liquidityObj) &&
                 liquidityObj.TryGetProperty("usd", out var liquidityUsdProp))

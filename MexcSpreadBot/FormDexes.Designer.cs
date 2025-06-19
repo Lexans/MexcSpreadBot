@@ -48,6 +48,7 @@
             volumeH1DataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             volumeH24DataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             liquidityUsdDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            priceChangeM5DataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             pairDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dataGridViewDexes).BeginInit();
             menuStrip1.SuspendLayout();
@@ -61,7 +62,7 @@
             dataGridViewDexes.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dataGridViewDexes.AutoGenerateColumns = false;
             dataGridViewDexes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewDexes.Columns.AddRange(new DataGridViewColumn[] { dexIdDataGridViewTextBoxColumn, dexIdStringDataGridViewTextBoxColumn, chainIdDataGridViewTextBoxColumn, pairAddressDataGridViewTextBoxColumn, baseTokenNameDataGridViewTextBoxColumn, quoteTokenSymbolDataGridViewTextBoxColumn, isIgnoredDataGridViewCheckBoxColumn, priceUsdDataGridViewTextBoxColumn, volumeM5DataGridViewTextBoxColumn, volumeH1DataGridViewTextBoxColumn, volumeH24DataGridViewTextBoxColumn, liquidityUsdDataGridViewTextBoxColumn, pairDataGridViewTextBoxColumn });
+            dataGridViewDexes.Columns.AddRange(new DataGridViewColumn[] { dexIdDataGridViewTextBoxColumn, dexIdStringDataGridViewTextBoxColumn, chainIdDataGridViewTextBoxColumn, pairAddressDataGridViewTextBoxColumn, baseTokenNameDataGridViewTextBoxColumn, quoteTokenSymbolDataGridViewTextBoxColumn, isIgnoredDataGridViewCheckBoxColumn, priceUsdDataGridViewTextBoxColumn, volumeM5DataGridViewTextBoxColumn, volumeH1DataGridViewTextBoxColumn, volumeH24DataGridViewTextBoxColumn, liquidityUsdDataGridViewTextBoxColumn, priceChangeM5DataGridViewTextBoxColumn, pairDataGridViewTextBoxColumn });
             dataGridViewDexes.DataSource = dexBindingSource;
             dataGridViewDexes.Location = new Point(12, 31);
             dataGridViewDexes.Name = "dataGridViewDexes";
@@ -221,6 +222,15 @@
             liquidityUsdDataGridViewTextBoxColumn.ReadOnly = true;
             liquidityUsdDataGridViewTextBoxColumn.Width = 125;
             // 
+            // priceChangeM5DataGridViewTextBoxColumn
+            // 
+            priceChangeM5DataGridViewTextBoxColumn.DataPropertyName = "PriceChangeM5";
+            priceChangeM5DataGridViewTextBoxColumn.HeaderText = "PriceChangeM5";
+            priceChangeM5DataGridViewTextBoxColumn.MinimumWidth = 6;
+            priceChangeM5DataGridViewTextBoxColumn.Name = "priceChangeM5DataGridViewTextBoxColumn";
+            priceChangeM5DataGridViewTextBoxColumn.ReadOnly = true;
+            priceChangeM5DataGridViewTextBoxColumn.Width = 125;
+            // 
             // pairDataGridViewTextBoxColumn
             // 
             pairDataGridViewTextBoxColumn.DataPropertyName = "Pair";
@@ -269,6 +279,7 @@
         private DataGridViewTextBoxColumn volumeH1DataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn volumeH24DataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn liquidityUsdDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn priceChangeM5DataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn pairDataGridViewTextBoxColumn;
         private BindingSource dexBindingSource;
     }
